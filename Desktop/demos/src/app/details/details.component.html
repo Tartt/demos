@@ -1,0 +1,46 @@
+<h2>คลังสินค้าเครืองเขียน</h2>
+
+<div class="search">
+    <input type="text">
+    <button>search</button>
+</div>
+
+<div class="addItems">
+   <a routerLink="add-items"> <button>addItems</button></a> 
+  
+</div>
+
+<hr>
+
+<table>
+    <tr>
+        <th>NO</th>
+        <th>Code ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Number</th>
+        <th>Details</th>
+        <th>Image</th>
+        <th>Edit</th>
+        <th>Delect</th>
+    </tr>
+
+
+        <tr *ngFor ="let datas of dataItems;let  i = index">
+
+        <td>{{datas.codeid}}</td>
+        <td>{{datas.nameItems}}</td>
+        <td>{{datas.priceItems}}</td>
+        <td>{{datas.numberItems}}</td>
+        <td>{{datas.detailItems}}</td>
+
+        <td><img src="" alt=""></td>
+        <td><button>edit</button></td>
+        <td><button (click)="removeItems(i)">delect</button></td>
+
+    </tr>
+
+
+
+
+</table>
